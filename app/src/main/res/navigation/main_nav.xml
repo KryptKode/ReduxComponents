@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/search_characters">
+
+    <fragment
+        android:id="@+id/search_characters"
+        android:name="com.kryptkode.componentarchitecture.ui.swahpee.search.SearchCharactersFragment"
+        tools:layout="@layout/layout_search_characters" >
+        <action
+            android:id="@+id/action_search_characters_to_character_detail"
+            app:destination="@id/character_detail" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/character_detail"
+        android:name="com.kryptkode.componentarchitecture.ui.swahpee.detail.CharacterInfoFragment"
+        tools:layout="@layout/layout_character_detail" >
+    </fragment>
+
+
+</navigation>

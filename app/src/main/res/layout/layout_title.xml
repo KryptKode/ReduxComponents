@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@+id/tv_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:padding="8dp"
+    android:layout_marginTop="16dp"
+    tools:text="@string/title_character_details"
+    android:textAppearance="@style/TextAppearance.App.H2"
+    app:drawableStartCompat="@drawable/ic_back"
+    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+    app:layout_constraintHorizontal_bias="0"
+    app:layout_constraintStart_toStartOf="@id/guidelineStart"
+    app:layout_constraintTop_toTopOf="@id/guidelineTop"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" />

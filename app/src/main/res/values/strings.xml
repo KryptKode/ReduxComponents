@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">ComponentArchitecture</string>
+
+    <string name="search_hint_text">Enter character name</string>
+    <string name="search_characters_screen_title">Find Star Wars characters</string>
+    <string name="swah_pee_logo_cd">Swah pee logo</string>
+    <string name="searching_loading_indicator_text">Searching…</string>
+    <string name="search_icon_cd">Search icon</string>
+    <string name="search_character_hint">Type a character name in the field above to begin search</string>
+    <string name="height">%scm</string>
+    <string name="title_planet">Planet</string>
+    <string name="title_species">Specie</string>
+    <string name="title_films">Films</string>
+    <string name="title_character_details">Character info</string>
+    <string name="loading_indicator_text">Loading…</string>
+    <string name="character_height">%1$scm\n%2$sinches</string>
+    <string name="character_birth_year">Born on %1$s</string>
+    <string name="height_label">Height</string>
+    <string name="retry_btn_text">Retry</string>
+    <string name="error_img_cd">Cloud image</string>
+    <string name="language_label">Language: %s</string>
+    <string name="population_label">Population: %s</string>
+    <string name="name_label">Name: %s</string>
+    <string name="show_more">Show more</string>
+    <string name="show_less">Show less</string>
+    <string name="swah_pee">Swah Pee</string>
+    <string name="counter_demo">Counter demo</string>
 </resources>

@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#349966</color>
+    <color name="colorPrimaryDark">#008051</color>
+    <color name="colorPrimaryLight">#C8E6C9</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <color name="colorSecondary">#72b3e7</color>
+    <color name="colorSecondaryDark">#446885</color>
+    <color name="colorCard">@color/cardview_light_background</color>
+
+    <color name="colorAccent">#ed524f</color>
+    <color name="colorOnAccent">#FFFFFF</color>
+
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+
+    <color name="colorDivider">#BDBDBD</color>
+
+
+    <color name="colorToolbarAccent">#FFFFFF</color>
+    <color name="colorBottomNavItemUnselected">#9C9B9B</color>
+    <color name="colorOverlay">#339C9B9B</color>
+
+    <color name="colorTransparent">#0000</color>
+    <color name="colorGray">#5a5b5e</color>
+    <color name="colorGrayLight">#777777</color>
+    <color name="colorGrayDark">#202020</color>
 </resources>

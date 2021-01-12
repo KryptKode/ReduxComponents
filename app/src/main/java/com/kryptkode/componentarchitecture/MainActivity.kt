@@ -1,46 +1,27 @@
 package com.kryptkode.componentarchitecture
 
 import android.os.Bundle
-import android.view.ViewGroup
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import com.kryptkode.componentarchitecture.components.CounterComponent
-import com.kryptkode.componentarchitecture.components.CounterState
-import com.kryptkode.recomponents.StoreImpl
-import com.kryptkode.recomponents.UIComponentManager
-
-val store = StoreImpl(
-    AppState(),
-    appReducer,
-    listOf(loggerMiddleWare, multiplierMiddleware)
-)
-
-
+import com.kryptkode.componentarchitecture.databinding.ActivityMainBinding
+import com.kryptkode.componentarchitecture.ui.counter.CounterDemoActivity
+import com.kryptkode.componentarchitecture.ui.swahpee.SwahPeeActivity
+import com.kryptkode.componentarchitecture.utils.viewbinding.viewBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private val uiComponentManager : UIComponentManager<AppState> by viewModels {
-        object : ViewModelProvider.Factory {
-            @Suppress("UNCHECKED_CAST")
-            override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-                return UIComponentManager(store) as T
-            }
-        }
-    }
+    private val binding by viewBinding(ActivityMainBinding::inflate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        initComponents(findViewById(R.id.root))
-    }
+        setContentView(binding.root)
 
-    private fun initComponents(container: ViewGroup) {
-        with(uiComponentManager){
-            subscribe(CounterComponent(container)){
-                CounterState(it.count.toString())
-            }
+        binding.counter.setOnClickListener {
+            startActivity(CounterDemoActivity.createIntent(this))
         }
+
+        binding.swahPee.setOnClickListener {
+            startActivity(SwahPeeActivity.createIntent(this))
+        }
+
     }
 }

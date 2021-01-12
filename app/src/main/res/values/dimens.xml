@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_h1">22sp</dimen>
+    <dimen name="text_size_h2">20sp</dimen>
+    <dimen name="text_size_h3">18sp</dimen>
+
+    <dimen name="text_size_body">22sp</dimen>
+
+
+    <!-- DIALOG -->
+    <dimen name="dialog_margin_top">32dp</dimen>
+    <dimen name="dialog_margin_bottom">30dp</dimen>
+    <dimen name="dialog_text_margin_horiz">20dp</dimen>
+    <dimen name="dialog_text_size">15sp</dimen>
+    <dimen name="dialog_line_spacing">7sp</dimen>
+    <dimen name="dialog_title_text_size">17sp</dimen>
+    <dimen name="dialog_title_line_spacing">5sp</dimen>
+    <dimen name="dialog_text_margin_top">18dp</dimen>
+    <dimen name="dialog_title_margin_start">26dp</dimen>
+    <dimen name="dialog_title_margin_end">26dp</dimen>
+    <dimen name="dialog_buttom_margin_bottom">30dp</dimen>
+    <dimen name="dialog_buttom_margin_top">32dp</dimen>
+    <dimen name="dialog_title_margin_top">35dp</dimen>
+    <dimen name="dialog_corner_radius">8dp</dimen>
+    <dimen name="dialog_button_width">141dp</dimen>
+    <dimen name="dialog_button_height">44dp</dimen>
+    <dimen name="dialog_margin_horiz">1dp</dimen>
+    <dimen name="dialog_margin_vert">1dp</dimen>
+
+
+
+    <!--LOGIN-->
+    <dimen name="login_text_input_margin">10dp</dimen>
+    <dimen name="login_first_text_input_margin_top">20dp</dimen>
+    <dimen name="login_welcome_margin_top">32dp</dimen>
+    <dimen name="login_forgot_password_margin_top">8dp</dimen>
+    <dimen name="login_forgot_password_min_height">16dp</dimen>
+    <dimen name="login_margin_top">12dp</dimen>
+    <dimen name="login_default_margin">8dp</dimen>
+
+    <dimen name="back_btn_size">36dp</dimen>
+    <dimen name="line_drawable_padding">8dp</dimen>
+    <dimen name="thumb_drawable_padding">16dp</dimen>
+    <dimen name="thumb_drawable_corners">32dp</dimen>
+    <dimen name="detail_edit_icon_size">48dp</dimen>
+
+    <dimen name="drop_down_menu_item_padding">16dp</dimen>
+
+</resources>
