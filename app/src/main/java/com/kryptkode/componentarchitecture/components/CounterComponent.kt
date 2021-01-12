@@ -22,7 +22,7 @@ class CounterComponent (parent:ViewGroup) : UIComponent<CounterState>() {
         }
 
         binding.multiply.setOnClickListener {
-            dispatch(CounterAction.Multiply(40))
+            dispatch(CounterAction.Multiply)
         }
     }
 

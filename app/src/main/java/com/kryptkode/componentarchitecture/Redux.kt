@@ -17,7 +17,8 @@ data class AppState(
 sealed class CounterAction: Action {
     object Decrement: CounterAction()
     object Increment: CounterAction()
-    data class Multiply (val value:Int): CounterAction()
+    object Multiply: CounterAction()
+    data class Multiplied (val value:Int): CounterAction()
 }
 
 val appReducer : Reducer<AppState> =  {action, appState ->
@@ -26,7 +27,9 @@ val appReducer : Reducer<AppState> =  {action, appState ->
 
         is CounterAction.Decrement -> appState.copy(count = appState.count - 1)
 
-        is CounterAction.Multiply -> appState.copy(count = action.value)
+        is CounterAction.Multiply -> appState
+
+        is CounterAction.Multiplied -> appState.copy(count = action.value)
         else -> appState
     }
 }
@@ -35,13 +38,8 @@ val multiplierMiddleware : Middleware<AppState> = {dispatch, appState, action, n
     if(action is CounterAction.Multiply){
         val scope = CoroutineScope(Dispatchers.IO)
         scope.launch {
-            delay(3000)
-            repeat(40){
-                dispatch(CounterAction.Increment)
-            }
-
             delay(4000)
-            dispatch(CounterAction.Multiply(appState.count * 500))
+            dispatch(CounterAction.Multiplied(appState.count * 40))
         }
     }
     next(appState, action, dispatch)
@@ -49,9 +47,10 @@ val multiplierMiddleware : Middleware<AppState> = {dispatch, appState, action, n
 
 val loggerMiddleWare : Middleware<AppState> = { dispatch, appState, action, next ->
     Timber.d("""
+        
         Action  $action dispatched
         ----------------------------
-        App state: $appState
+        App state: $appState\n
         ----------------------------
     """)
     next(appState, action, dispatch)
