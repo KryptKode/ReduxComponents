@@ -1,0 +1,3 @@
+include ':recomponents'
+include ':app'
+rootProject.name = "ComponentArchitecture"
